@@ -39,7 +39,9 @@ def translate_name_to_number(transactions):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    file_names = [f for f in os.listdir() if f.lower().endswith('.pdf')]
+    PATH = "pdfs/"
+    file_names = [PATH + f for f in os.listdir(PATH) if f.lower().endswith('.pdf')]
+    print(file_names)
 
     transactions = []
     for file_name in file_names:
