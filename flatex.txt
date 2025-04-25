@@ -1,0 +1,88 @@
+Handelstag         02.01.2025
+Nr.249704393/1     Kauf         ISHARES CORE S&P 500 ETF (IE00B5BMR087/A0YEDG)
+Ausgeführt    :               5 St.     Kurswert      :           3.051,45 EUR
+Kurs          :      610,290000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:            0,00 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :          -3.053,96 EUR
+                             Regulierung              :               2,44 EUR
+
+Handelstag         10.01.2025
+Nr.249944402/1     Kauf        VANGUARD FTSE ALL-WLD UCI (IE00B3RBWM25/A1JX52)
+Ausgeführt    :              10 St.     Kurswert      :           1.330,00 EUR
+Kurs          :      133,000000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:            0,00 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :          -1.330,00 EUR
+                             Regulierung              :               0,00 EUR
+
+Handelstag         05.02.2025
+Nr.290993707/1     Kauf         ISHARES CORE S&P 500 ETF (IE00B5BMR087/A0YEDG)
+Ausgeführt    :              10 St.     Kurswert      :           6.126,30 EUR
+Kurs          :      612,630000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:            0,00 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :          -6.128,81 EUR
+                             Regulierung              :               2,44 EUR
+
+Handelstag         06.02.2025
+Nr.291029145/1     Verkauf      ISHARES CORE S&P 500 ETF (IE00B5BMR087/A0YEDG)
+Ausgeführt    :              15 St.     Kurswert      :           9.338,85 EUR
+Kurs          :      622,590000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:          100,02 EUR   **Einbeh. KESt  :              27,51 EUR
+                                        Endbetrag     :           9.308,83 EUR
+                             Regulierung              :               2,44 EUR
+
+Handelstag         24.02.2025
+Nr.291691287/1     Kauf             VANGUARD S&P 500 ETF (IE00B3XXRP09/A1JX53)
+Ausgeführt    :             290 St.     Kurswert      :          31.689,46 EUR
+Kurs          :      109,274000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:            0,00 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :         -31.689,46 EUR
+                             Regulierung              :               0,00 EUR
+
+Handelstag         03.03.2025
+Nr.292127715/1     Kauf             VANGUARD S&P 500 ETF (IE00B3XXRP09/A1JX53)
+Ausgeführt    :              46 St.     Kurswert      :           4.900,84 EUR
+Kurs          :      106,540000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:            0,00 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :          -4.900,84 EUR
+                             Regulierung              :               0,00 EUR
+
+Handelstag         08.04.2025
+Nr.294007502/1     Kauf             VANGUARD S&P 500 ETF (IE00B3XXRP09/A1JX53)
+Ausgeführt    :              24 St.     Kurswert      :           2.140,80 EUR
+Kurs          :       89,200000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:            0,00 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :          -2.140,80 EUR
+                             Regulierung              :               0,00 EUR
+
+Handelstag         09.04.2025
+Nr.294107219/1     Verkauf          VANGUARD S&P 500 ETF (IE00B3XXRP09/A1JX53)
+Ausgeführt    :              25 St.     Kurswert      :           2.300,00 EUR
+Kurs          :       92,000000 EUR     Provision     :               5,90 EUR
+Gewinn/Verlust:         -386,81 EUR   **Einbeh. KESt  :             -57,02 EUR
+                                        Endbetrag     :           2.348,61 EUR
+                             Regulierung              :               2,44 EUR
+
+Handelstag         10.04.2025
+Nr.294209862/1     Kauf             VANGUARD S&P 500 ETF (IE00B3XXRP09/A1JX53)
+Ausgeführt    :              27 St.     Kurswert      :           2.374,11 EUR
+Kurs          :       87,930000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:            0,00 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :          -2.374,11 EUR
+                             Regulierung              :               0,00 EUR
+
+Handelstag         11.04.2025
+Nr.294271577/1     Verkauf          VANGUARD S&P 500 ETF (IE00B3XXRP09/A1JX53)
+Ausgeführt    :              28 St.     Kurswert      :           2.521,40 EUR
+Kurs          :       90,050000 EUR     Provision     :               5,90 EUR
+Gewinn/Verlust:         -447,02 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :           2.512,99 EUR
+                             Regulierung              :               2,44 EUR
+
+Handelstag         15.04.2025
+Nr.294451402/1     Kauf             VANGUARD S&P 500 ETF (IE00B3XXRP09/A1JX53)
+Ausgeführt    :              27 St.     Kurswert      :           2.451,11 EUR
+Kurs          :       90,782000 EUR     Provision     :               0,00 EUR
+Gewinn/Verlust:            0,00 EUR   **Einbeh. KESt  :               0,00 EUR
+                                        Endbetrag     :          -2.451,11 EUR
+                             Regulierung              :               0,00 EUR
+

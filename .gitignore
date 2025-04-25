@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+/env/
+build/
+dist/
+*.egg-info
+
+# General
+.DS_Store
+*.swp
+*~
+tmp/
+temp/
+tmp.*
+log/
+logs/
+*.log
+
+# pdfs
+*.pdf
+
+# excel
+*.xlsx
