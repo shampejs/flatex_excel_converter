@@ -15,8 +15,11 @@ class Thesaurierung(transaction_class.Transaction):
         name = self.evaluate_regex(data, self.PATTERN_NAME)
         amount = self.to_number(self.evaluate_regex(data, self.PATTERN_AMOUNT))
         course = self.parse_course_with_exchange_rate(data, self.PATTERN_COURSE, self.PATTERN_EXCHANGE_RATE)
-        kest = self.to_number(self.evaluate_regex(data, self.PATTERN_KEST))
-        end_amount = self.to_number(self.evaluate_regex(data, self.PATTERN_END_AMOUNT))
-        winning = None
+        #kest = self.to_number(self.evaluate_regex(data, self.PATTERN_KEST))
+        end_amount = -course*amount
+        #end_amount = self.to_number(self.evaluate_regex(data, self.PATTERN_END_AMOUNT))
 
-        super().__init__(data, date, name, amount, kind_of_transaction, course, end_amount, winning, kest)
+        super().__init__(data=data, date=date, name=name, kind_of_transaction=kind_of_transaction,
+                         course=course, amount=amount, course_value=course*amount,
+                         provision=0, own_expenses=0, foreign_expenses=0, kest=0,
+                         end_amount=end_amount, winning=0)

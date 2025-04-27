@@ -2,7 +2,8 @@ from openpyxl import Workbook
 from openpyxl.styles import PatternFill
 
 from trade_class import Trade
-from transaction_class import Transaction
+from trading_action_class import TradingAction
+import copy
 
 colors = ['ADD8E6', '90EE90', 'FFFACD', 'FFB6C1', 'E6E6FA', 'F5F5DC']
 
@@ -12,7 +13,7 @@ def create_excel_file(transactions, name_map):
 
     create_historic_sheet(wb, transactions)
     create_sorted_sheet(wb, transactions, name_map)
-    create_billing(wb, transactions, name_map)
+    create_detailed_overview(wb, transactions, name_map)
 
     wb.save("generated_flatex.xlsx")
 
@@ -56,8 +57,12 @@ def create_sorted_sheet(wb, transactions, name_map):
 
         last_name = transaction.name
 
-def create_billing(wb, transactions, name_map):
-    ws = wb.create_sheet("Abrechnung")
+
+
+
+
+def create_detailed_overview(wb, transactions, name_map):
+    ws = wb.create_sheet("Detailiert")
     ws.append(
         ["Datum", "Name", "Typ", "Kurs", "Anzahl", "Gesamt", "Provision", "Eigene Spesen", "Fremnde Spesen", "KEST",
          "Endbetrag", "Gewinn + / Verlust -"])
@@ -72,21 +77,46 @@ def create_billing(wb, transactions, name_map):
 
         if transaction:
             if tmp_transaction:
+                # calculate the pure win / loss
+                if transaction.kind_of_transaction == "Verkauf":
+                    create_billing(wb, transaction, tmp_transaction, name_map)
+
                 tmp_transaction.update_transaction(transaction)
+
             else:
-                tmp_transaction = Trade.init_for_billing(transaction)
+                tmp_transaction = TradingAction(transaction)
 
-            ws.append(transaction.get_excel_format())
-            row_number = ws.max_row
-            color_row(ws, row_number, colors[name_map[transaction.name] % len(colors)])
-
-            ws.append(tmp_transaction.get_excel_format())
-            row_number = ws.max_row
-            color_row(ws, row_number, colors[name_map[transaction.name] % len(colors)])
+            add_line_to_excel(ws,transaction.get_excel_format(), colors[name_map[transaction.name] % len(colors)])
+            add_line_to_excel(ws,tmp_transaction.get_excel_format(), colors[name_map[transaction.name] % len(colors)])
 
             # Update the tmp_transaction to take action on the last transaction
 
         last_name = transaction.name
+
+def create_billing(wb, transaction, tmp_transaction, name_map):
+    if "Abrechnung" in wb.sheetnames:
+        ws = wb.get_sheet_by_name("Abrechnung")
+    else:
+        ws = wb.create_sheet("Abrechnung")
+        ws.append(
+            ["Datum", "Name", "Typ", "Kurs", "Anzahl", "Gesamt", "Provision", "Eigene Spesen", "Fremnde Spesen", "KEST",
+             "Endbetrag", "Gewinn + / Verlust -"])
+    add_line_to_excel(ws, tmp_transaction.get_excel_format(), colors[name_map[transaction.name] % len(colors)])
+    add_line_to_excel(ws, transaction.get_excel_format(), colors[name_map[transaction.name] % len(colors)])
+
+
+    # calculate win or loss
+    selling_transaction = copy.deepcopy(tmp_transaction)
+    selling_transaction.pre_selling_calculation(transaction)
+    add_line_to_excel(ws, selling_transaction.get_excel_format(), colors[name_map[transaction.name] % len(colors)])
+    selling_transaction.selling_result(transaction)
+    add_line_to_excel(ws, selling_transaction.get_excel_format(), colors[name_map[transaction.name] % len(colors)])
+
+    ws.append([])
+
+def add_line_to_excel(ws, line, color):
+    ws.append(line)
+    color_row(ws, ws.max_row, color)
 
 
 def color_row(worksheet, row_index, color_hex):

@@ -8,6 +8,8 @@ import buy_class
 
 from pypdf import PdfReader
 
+PATH = "pdfs/"
+
 def create_transaction_from_file(path):
     reader = PdfReader(path)
     first_page = reader.pages[0].extract_text()
@@ -39,7 +41,6 @@ def translate_name_to_number(transactions):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    PATH = "pdfs/"
     file_names = [PATH + f for f in os.listdir(PATH) if f.lower().endswith('.pdf')]
     print(file_names)
 
